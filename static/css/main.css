@@ -1,0 +1,60 @@
+body {
+    font-family: 'Playfair Display', serif;
+    padding-top: 61px;
+}
+
+.menu {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    line-heigth: normal;
+    font-size: 26px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu-content {
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.menu-content.right .menu-item {
+    padding-top: 14px;
+    font-size: 14px;
+}
+
+.menu-item {
+    list-style-type: none;
+    display: block;
+    cursor: pointer;
+    float: left;
+    margin: 8px 8px 16px;
+}
+
+.menu-item:first-child {
+    margin-left: 16px;
+}
+
+.menu-item:hover {
+    border-bottom: 1px solid;
+    margin-bottom: 15px;
+}
+
+.menu-item.active {
+    border-bottom: 2px solid;
+    margin-bottom: 14px;
+}
+
+
+main {
+}

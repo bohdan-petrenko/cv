@@ -1,0 +1,14 @@
+body {
+    background-color: #E6EBE0;
+}
+
+::selection {
+    background-color: #ED6A5A;
+    color: white;
+}
+
+.menu {
+    background-color: #5CA4A9;
+    color: white;
+}
+
