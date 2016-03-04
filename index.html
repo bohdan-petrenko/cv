@@ -13,26 +13,32 @@
     <link rel="stylesheet" type="text/css" href="static/css/theme.css">
 
     <script src="static/js/jquery-2.2.1.js"></script>
+    <script src="static/js/main.js"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
-            <ul class="menu-content left">
-                <li class="menu-item">Personal Skills</li>
-                <li class="menu-item active">Professional Skills</li>
-                <li class="menu-item">Experience</li>
-                <li class="menu-item">Contacts</li>
+            <div class="menu-header visible-xs visible-sm">
+                <span>Menu</span>
+                <img src="static/icons/collapse.png" height="26">
+            </div>
+            <ul class="menu-content menu-content-left">
+                <li class="menu-item"><div>Personal Skills</div></li>
+                <li class="menu-item active"><div>Professional Skills</div></li>
+                <li class="menu-item"><div>Experience</div></li>
+                <li class="menu-item"><div>Contacts</div></li>
             </ul>
-            <ul class="menu-content right">
-                <li class="menu-item">English</li>
+            <ul class="menu-content menu-content-right">
+                <li class="menu-item"><div>English</div></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="container" id="professional-skills">
             <ul>
                 <li>
-                    Programming:
+                    <img src="static/icons/programming.png" height="52">
+                    <span class="skill-category">Programming:</span>
                     <ul>
                         <li>HTML 5</li>
                         <li>CSS 3, Bootstrap 3</li>
@@ -43,21 +49,24 @@
                     </ul>
                 </li>
                 <li>
-                    Networking:
+                    <img src="static/icons/networks.png" height="52">
+                    <span class="skill-category">Networking:</span>
                     <ul>
                         <li>XML, JSON, YAML, SOAP</li>
                         <li>HTTP, HTTPS, WebDav, FTP</li>
                     </ul>
                 </li>
                 <li>
-                    Testing:
+                    <img src="static/icons/testing.png" height="52">
+                    <span class="skill-category">Testing:</span>
                     <ul>
                         <li>JUnit</li>
                         <li>SoapUI</li>
                     </ul>
                 </li>
                 <li>
-                    Tools:
+                    <img src="static/icons/tools.png" height="52">
+                    <span class="skill-category">Tools:</span>
                     <ul>
                         <li>Maven</li>
                         <li>Git, Svn</li>
@@ -68,14 +77,16 @@
                     </ul>
                 </li>
                 <li>
-                    Systems:
+                    <img src="static/icons/os.png" height="52">
+                    <span class="skill-category">Systems:</span>
                     <ul>
                         <li>Windows XP/7/8/10</li>
                         <li>Linux Ubuntu/Kubuntu/Mint</li>
                     </ul>
                 </li>
                 <li>
-                    Languages:
+                    <img src="static/icons/languages.png" height="52">
+                    <span class="skill-category">Languages:</span>
                     <ul>
                         <li>Ukrainian - mother tongue</li>
                         <li>Russian - mother tongue</li>

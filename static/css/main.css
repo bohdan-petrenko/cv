@@ -1,6 +1,108 @@
+@media (max-width: 992px) {
+    body {
+        padding-top: 53px;
+    }
+
+    .menu-header {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        margin: 8px 0;
+    }
+
+    .menu-content {
+        display: none;
+    }
+
+    .menu-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item>div {
+        display: inline-block;
+        margin: 4px;
+    }
+
+    .menu-item:first-child>div {
+        margin-top: 8px;
+    }
+
+    .menu-item:last-child>div {
+        margin-bottom: 8px;
+    }
+
+    .menu-item>div:hover {
+        margin-bottom: 3px;
+    }
+
+    .menu-item.active>div {
+        margin-bottom: 2px;
+    }
+
+    .menu-item:last-child>div:hover {
+        margin-bottom: 7px;
+    }
+
+    .menu-item:last-child.active>div {
+        margin-bottom: 6px;
+    }
+
+    .menu-header>span {
+        padding-left: 19px;
+    }
+
+    .menu-header>img {
+        float: right;
+        padding-right: 13px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 61px;
+    }
+
+    .menu-item:first-child>div {
+        margin-left: 16px;
+    }
+
+    .menu-item:last-child>div {
+        margin-right: 16px;
+    }
+
+    .menu-content-left {
+        float: left;
+    }
+
+    .menu-content-right {
+        float: right;
+    }
+
+    .menu-item {
+        float: left;
+    }
+
+    .menu-item>div {
+        margin: 8px 8px 16px;
+    }
+
+    .menu-content.menu-content-right .menu-item>div {
+        padding-top: 14px;
+    }
+
+    .menu-item>div:hover {
+        margin-bottom: 15px;
+    }
+
+    .menu-item.active>div {
+        margin-bottom: 14px;
+    }
+}
+
 body {
     font-family: 'Playfair Display', serif;
-    padding-top: 61px;
 }
 
 .menu {
@@ -20,41 +122,39 @@ body {
     padding-left: 0px;
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.menu-content.right .menu-item {
-    padding-top: 14px;
+.menu-content.menu-content-right .menu-item>div {
     font-size: 14px;
 }
 
 .menu-item {
     list-style-type: none;
     display: block;
+}
+
+.menu-item>div {
     cursor: pointer;
-    float: left;
-    margin: 8px 8px 16px;
 }
 
-.menu-item:first-child {
-    margin-left: 16px;
-}
-
-.menu-item:hover {
+.menu-item>div:hover {
     border-bottom: 1px solid;
-    margin-bottom: 15px;
 }
 
-.menu-item.active {
+.menu-item.active>div {
     border-bottom: 2px solid;
-    margin-bottom: 14px;
 }
-
 
 main {
+    padding-top: 26px;
+}
+
+#professional-skills>ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.skill-category {
+    font-size: 26px;
+    padding-left: 0.62em;
+    display: inline-block;
+    vertical-align: middle;
 }
