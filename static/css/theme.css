@@ -12,3 +12,11 @@ body {
     color: white;
 }
 
+.menu-item>a {
+    color: white;
+}
+
+.education-period {
+    color: #ED6A5A;
+}
+

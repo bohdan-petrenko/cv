@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="BohdanPatrenko">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bohdan Petrenko personal site</title>
@@ -12,10 +12,15 @@
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <link rel="stylesheet" type="text/css" href="static/css/theme.css">
 
+    <script src="static/localization/l10n-en.js"></script>
+    <script src="static/localization/l10n-ua.js"></script>
+
     <script src="static/js/jquery-2.2.1.js"></script>
+    <script src="static/js/angular.js"></script>
+    <script src="static/js/angular-route.js"></script>
     <script src="static/js/main.js"></script>
 </head>
-<body>
+<body ng-controller="L10nCtrl as l10nCtrl">
     <header>
         <nav class="menu">
             <div class="menu-header visible-xs visible-sm">
@@ -23,78 +28,17 @@
                 <img src="static/icons/collapse.png" height="26">
             </div>
             <ul class="menu-content menu-content-left">
-                <li class="menu-item"><div>Personal Skills</div></li>
-                <li class="menu-item active"><div>Professional Skills</div></li>
-                <li class="menu-item"><div>Experience</div></li>
-                <li class="menu-item"><div>Contacts</div></li>
+                <li class="menu-item" id="personal-skills-item"><a>{{l10nCtrl.l10n.index.personalSkills}}</a></li>
+                <li class="menu-item" id="professional-skills-item"><a href="#professional-skills">{{l10nCtrl.l10n.index.professionalSkills}}</a></li>
+                <li class="menu-item" id="experience-item"><a href="#experience">{{l10nCtrl.l10n.index.experience}}</a></li>
+                <li class="menu-item" id="contacts-item"><a>{{l10nCtrl.l10n.index.contacts}}</a></li>
             </ul>
             <ul class="menu-content menu-content-right">
-                <li class="menu-item"><div>English</div></li>
+                <li class="menu-item"><a ng-click="l10nCtrl.changeLanguage()">{{l10nCtrl.l10n.index.language}}</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="container" id="professional-skills">
-            <ul>
-                <li>
-                    <img src="static/icons/programming.png" height="52">
-                    <span class="skill-category">Programming:</span>
-                    <ul>
-                        <li>HTML 5</li>
-                        <li>CSS 3, Bootstrap 3</li>
-                        <li>JavaScript, JQuery, KnockoutJs, AngularJs, RequireJs</li>
-                        <li>Java, J2EE, Java Swing</li>
-                        <li>Spring MVC, Spring JDBC, Spring HTTP</li>
-                        <li>SQL</li>
-                    </ul>
-                </li>
-                <li>
-                    <img src="static/icons/networks.png" height="52">
-                    <span class="skill-category">Networking:</span>
-                    <ul>
-                        <li>XML, JSON, YAML, SOAP</li>
-                        <li>HTTP, HTTPS, WebDav, FTP</li>
-                    </ul>
-                </li>
-                <li>
-                    <img src="static/icons/testing.png" height="52">
-                    <span class="skill-category">Testing:</span>
-                    <ul>
-                        <li>JUnit</li>
-                        <li>SoapUI</li>
-                    </ul>
-                </li>
-                <li>
-                    <img src="static/icons/tools.png" height="52">
-                    <span class="skill-category">Tools:</span>
-                    <ul>
-                        <li>Maven</li>
-                        <li>Git, Svn</li>
-                        <li>Apache Tomcat</li>
-                        <li>PostgreSQL, MySQL, SQLite</li>
-                        <li>Intellij IDEA, Eclipse</li>
-                        <li>Microsoft Word/Excel/PowerPoint/Visio</li>
-                    </ul>
-                </li>
-                <li>
-                    <img src="static/icons/os.png" height="52">
-                    <span class="skill-category">Systems:</span>
-                    <ul>
-                        <li>Windows XP/7/8/10</li>
-                        <li>Linux Ubuntu/Kubuntu/Mint</li>
-                    </ul>
-                </li>
-                <li>
-                    <img src="static/icons/languages.png" height="52">
-                    <span class="skill-category">Languages:</span>
-                    <ul>
-                        <li>Ukrainian - mother tongue</li>
-                        <li>Russian - mother tongue</li>
-                        <li>English - intermediate</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+    <main ng-view>
     </main>
     <footer>
 
