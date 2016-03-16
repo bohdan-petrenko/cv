@@ -1,10 +1,71 @@
-<section class="container" id="experience">
-    <section class="project">
-        <div class="project-name"></div>
-        <div class="project-period"></div>
-        <div class="project-work-position"></div>
-        <div class="project-tools"></div>
-        <div class="project-description"></div>
-        <div class="project-work-responsibilities"></div>
+<article class="container" id="experience">
+    <section class="project" ng-repeat="project in l10nCtrl.l10n.experience.projects">
+        <header class="project-header">
+            <h1 class="project-name line">
+                <div class="tag no-select hidden-xs">{{l10nCtrl.l10n.experience.projectName}}</div>
+                <div>{{project.name}}</div>
+            </h1>
+        </header>
+        <div class="role-and-period">
+            <div class="float-line hidden-xs line">
+                <div class="project-work-position">
+                    <span class="tag">{{l10nCtrl.l10n.experience.role}}: </span>
+                    <span>{{project.role}}</span>
+                </div>
+                <div class="project-period">
+                    <span class="tag">{{l10nCtrl.l10n.experience.timePeriod}}: </span>
+                    <span>{{project.period}}</span>
+                </div>
+            </div>
+            <div class="visible-xs">
+                <div class="project-work-position line">
+                    <span class="tag">{{l10nCtrl.l10n.experience.role}}: </span>
+                    <span>{{project.role}}</span>
+                </div>
+                <div class="project-period line">
+                    <span class="tag">{{l10nCtrl.l10n.experience.timePeriod}}: </span>
+                    <span>{{project.period}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-tools">
+            <ul class="inline-list">
+                <span class="tag">{{l10nCtrl.l10n.experience.tools}}:</span>
+                <li class="project-tool" ng-repeat="tool in project.tools">
+                    {{tool}}
+                </li>
+            </ul>
+        </div>
+        <div class="project-description line">
+            <span class="tag">{{l10nCtrl.l10n.experience.description}}:</span>
+            <span>{{project.description}}</span>
+        </div>
+        <div class="project-functionality line">
+            <div class="tag">
+                <span>{{l10nCtrl.l10n.experience.functionality}}:</span>
+            </div>
+            <ul class="list">
+                <li class="project-function" ng-repeat="function in project.functionality">
+                    {{function}}
+                </li>
+            </ul>
+        </div>
+        <div class="project-work-responsibilities line">
+            <div class="tag">
+                <span>{{l10nCtrl.l10n.experience.responsibilities}}:</span>
+            </div>
+            <ul class="list">
+                <li class="responsibility" ng-repeat="responsibility in project.responsibilities">
+                    {{responsibility}}
+                </li>
+            </ul>
+        </div>
+        <div class="float-line visible-xs">
+            <div class="pull-right">
+                <i class="button-icon less-icon" ng-click="triggerFull($index)"
+                    ng-class="{'less-icon': ExperienceCtrl.isFull($index),
+                               'more-icon': !ExperienceCtrl.isFull($index)}"></i>
+            </div>
+        </div>
     </section>
-</section>
+</article>

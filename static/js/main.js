@@ -42,9 +42,33 @@ application.controller("ProfessionalSkillsCtrl", function() {
     activateMenuItem("#professional-skills-item");
 });
 
-application.controller("ExperienceCtrl", function() {
+application.controller("ExperienceCtrl", ['$scope', function($scope) {
     activateMenuItem("#experience-item");
-});
+    var projects = [];
+    for (var i = 0; i < window.l10nEn.experience.projects.length; i++) {
+        projects.push(false);
+    }
+
+    $scope.triggerFull = function(index) {
+        console.log("triggerFull");
+        console.log(index);
+        $scope.projects[+index] = !$scope.projects[+index];
+    };
+
+    $scope.isFull = function(index) {
+        if (this.projects[+index])
+            return true;
+        return false;
+    }
+
+    $scope.displayElement = function(index) {
+        var xsSize = 767,
+            windowWidth = window.innerWidth;
+        if (windowWidth > xsSize)
+            return true;
+        return isFull(index);
+    }
+}]);
 
 
 function activateMenuItem(itemName) {

@@ -48,12 +48,21 @@ window.l10nEn.professionalSkills = {
     masterPeriod: "September 2013 - December 2014",
 };
 
-window.l10nUa.experience.projects = window.l10nEn.experience.projects = [
+window.l10nEn.experience = {
+    projectName: "Project",
+    timePeriod: "Time period",
+    role: "Role",
+    tools: "Technologies & tools",
+    description: "Description",
+    functionality: "Functionality",
+    responsibilities: "Responsibilities"
+};
+window.l10nEn.experience.projects = [
     {
         name: "TAC converter",
         period: "October 2015 – January 2016",
-        role: "frontend developer",
-        tools: ["Html", "Css", "Bootstrap 3", "JavaScript", "AngularJs", "RequireJs", "JQuery", "Git"],
+        role: "Frontend developer",
+        tools: ["Html 5", "Css 3", "Bootstrap 3", "JavaScript", "AngularJs", "RequireJs", "JQuery", "Git"],
         description: "Application, that allows to work with mobile phone devices data base. There are two types of users in application: user and admin. Only admin can work with templates.",
         functionality: [
             "Add new device using template",
@@ -65,10 +74,10 @@ window.l10nUa.experience.projects = window.l10nEn.experience.projects = [
             "Delete template"
         ],
         responsibilities: [
-            "developing site structure",
-            "developing site functionality",
-            "developing site design",
-            "bugs fixing"
+            "Developing site structure",
+            "Developing site functionality",
+            "Developing site design",
+            "Bugs fixing"
         ]
     }
 ];
