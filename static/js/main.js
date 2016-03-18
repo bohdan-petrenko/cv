@@ -50,24 +50,29 @@ application.controller("ExperienceCtrl", ['$scope', function($scope) {
     }
 
     $scope.triggerFull = function(index) {
-        console.log("triggerFull");
-        console.log(index);
-        $scope.projects[+index] = !$scope.projects[+index];
+        projects[+index] = !projects[+index];
     };
 
     $scope.isFull = function(index) {
-        if (this.projects[+index])
+        if (projects[+index])
             return true;
         return false;
-    }
+    };
 
     $scope.displayElement = function(index) {
+        console.log(index);
         var xsSize = 767,
             windowWidth = window.innerWidth;
         if (windowWidth > xsSize)
             return true;
-        return isFull(index);
-    }
+        return $scope.isFull(index);
+    };
+    //
+    //$scope.$watch(function(){
+    //    return window.innerWidth;
+    //}, function(value) {
+    //    console.log(value);
+    //});
 }]);
 
 

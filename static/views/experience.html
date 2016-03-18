@@ -28,6 +28,13 @@
                 </div>
             </div>
         </div>
+        <!--<div class="project-link line" ng-show="{{project.link}}">-->
+            <!--<div class="float-line">-->
+                <!--<div class="pull-right">-->
+                    <!--<a ng-href="{{project.link}}" target="_blank">{{l10nCtrl.l10n.experience.link}}</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="project-tools">
             <ul class="inline-list">
                 <span class="tag">{{l10nCtrl.l10n.experience.tools}}:</span>
@@ -36,11 +43,11 @@
                 </li>
             </ul>
         </div>
-        <div class="project-description line">
+        <div class="project-description line" ng-show="isFull($index)">
             <span class="tag">{{l10nCtrl.l10n.experience.description}}:</span>
             <span>{{project.description}}</span>
         </div>
-        <div class="project-functionality line">
+        <div class="project-functionality line" ng-show="isFull($index)">
             <div class="tag">
                 <span>{{l10nCtrl.l10n.experience.functionality}}:</span>
             </div>
@@ -60,11 +67,17 @@
                 </li>
             </ul>
         </div>
-        <div class="float-line visible-xs">
+        <div class="float-line project-footer">
+            <div class="pull-left">
+                <a ng-href="{{project.link}}" target="_blank" class="creative-link"
+                   data-hover="{{l10nCtrl.l10n.experience.link}}">
+                    <span>{{l10nCtrl.l10n.experience.link}}</span>
+                </a>
+            </div>
             <div class="pull-right">
-                <i class="button-icon less-icon" ng-click="triggerFull($index)"
-                    ng-class="{'less-icon': ExperienceCtrl.isFull($index),
-                               'more-icon': !ExperienceCtrl.isFull($index)}"></i>
+                <i class="button-icon" ng-click="triggerFull($index)"
+                    ng-class="{'less-icon': isFull($index),
+                               'more-icon': !isFull($index)}"></i>
             </div>
         </div>
     </section>

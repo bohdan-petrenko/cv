@@ -51,6 +51,7 @@ window.l10nEn.professionalSkills = {
 window.l10nEn.experience = {
     projectName: "Project",
     timePeriod: "Time period",
+    link: "Visit web site",
     role: "Role",
     tools: "Technologies & tools",
     description: "Description",
@@ -61,17 +62,24 @@ window.l10nEn.experience.projects = [
     {
         name: "TAC converter",
         period: "October 2015 – January 2016",
-        role: "Frontend developer",
-        tools: ["Html 5", "Css 3", "Bootstrap 3", "JavaScript", "AngularJs", "RequireJs", "JQuery", "Git"],
-        description: "Application, that allows to work with mobile phone devices data base. There are two types of users in application: user and admin. Only admin can work with templates.",
+        link: "http://tacconverter.com/",
+        role: "Lead frontend developer",
+        tools: ["Html 5", "Css 3", "Bootstrap 3", "Bootstrap Material", "JavaScript", "JQuery 2.2", "JQuery UI 1.11",
+                "AlertifyJs", "Chosen JQuery", "EasyDropdownJs", "MomentJs", "KnockoutJs 3.3", "DavisJs", "RequireJs",
+                "Git"],
+        /**Додаток, який дозволяє працювати з базою даних мобільних телефонів та додавати і редагувати дані про пристрій згідно шаблону. Також можна створювати і редагувати шаблони, але це доступно лише адміністратору додатку. Клієнтська частина реалізована у вигляді одно-сторінкового сайту з дотриманням основних канонів матеріал дизайну.*/
+        description: "An application that allows you to work with a database of mobile phones and to add and edit data " +
+                    "on the device according to the template. You can also create and edit templates , but it is only " +
+                    "available to the administrator. The client side is implemented as a single page web site in " +
+                    "compliance with the basic canons of material design.",
         functionality: [
             "Add new device using template",
             "Modify existing device",
             "Delete device",
-            "Feedback",
             "Create new template",
             "Modify existing template",
-            "Delete template"
+            "Delete template",
+            "Feedback"
         ],
         responsibilities: [
             "Developing site structure",
