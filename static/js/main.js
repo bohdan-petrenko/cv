@@ -1,12 +1,6 @@
 /**
  * Created by Petrenko on 04.03.2016.
  */
-//TODO: temporary
-$(function() {
-    $(".menu-header").click(function() {
-        $(".menu-content").toggle(1000);
-    });
-});
 
 window.locale = "en";
 window.application = angular.module("BohdanPatrenko", ['ngRoute']);
@@ -44,9 +38,10 @@ application.controller("ProfessionalSkillsCtrl", function() {
 
 application.controller("ExperienceCtrl", ['$scope', function($scope) {
     activateMenuItem("#experience-item");
-    var projects = [];
+    var projects = [],
+        isAllFull = window.isMobile() ? false : true;
     for (var i = 0; i < window.l10nEn.experience.projects.length; i++) {
-        projects.push(false);
+        projects.push(isAllFull);
     }
 
     $scope.triggerFull = function(index) {
@@ -59,25 +54,20 @@ application.controller("ExperienceCtrl", ['$scope', function($scope) {
         return false;
     };
 
-    $scope.displayElement = function(index) {
-        console.log(index);
-        var xsSize = 767,
-            windowWidth = window.innerWidth;
-        if (windowWidth > xsSize)
-            return true;
-        return $scope.isFull(index);
+    $scope.isAllFull = function() {
+        return isAllFull;
     };
-    //
-    //$scope.$watch(function(){
-    //    return window.innerWidth;
-    //}, function(value) {
-    //    console.log(value);
-    //});
+
+    $scope.triggerFullForAll = function() {
+        isAllFull = !isAllFull;
+        for (var i = 0; i < projects.length; i++)
+            projects[i] = isAllFull;
+    }
 }]);
 
 
 function activateMenuItem(itemName) {
-    $('.menu-content>li').removeClass('active');
-    $(itemName).addClass('active');
+    $('.menu-content>li>a').removeClass('active');
+    $(itemName + ">a").addClass('active');
 }
 
