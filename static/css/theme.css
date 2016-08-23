@@ -17,18 +17,24 @@ body {
     /*background-image: url(../icons/bg.jpg);*/
 }
 
-::selection {
-    background-color: #ED6A5A;
-    color: white;
-}
+/*::selection {*/
+    /*background-color: #ED6A5A;*/
+    /*color: white;*/
+/*}*/
 
-.link-underlined {
-    color: white;
-}
+/*.link-underlined {*/
+    /*color: white;*/
+/*}*/
 
-.link-underlined:after {
-    background: white;
-}
+/*.link-underlined:after {*/
+    /*background: white;*/
+/*}.link-underlined {*/
+    /*color: white;*/
+/*}*/
+
+/*.link-underlined:after {*/
+    /*background: white;*/
+/*}*/
 
 .menu {
     background-color: rgb(29, 134, 139);
@@ -50,44 +56,44 @@ body {
 }
 
 .project {
-    background-color: white;
-    -webkit-box-shadow: 5px 5px 20px 6px rgba(256,256,256,0.5);
-    -moz-box-shadow: 5px 5px 20px 6px rgba(0,0,0,0.5);
-    box-shadow: 5px 5px 20px 6px rgba(0,0,0,0.5);
+    /*background-color: white;*/
+    /*-webkit-box-shadow: 5px 5px 20px 6px rgba(256,256,256,0.5);*/
+    /*-moz-box-shadow: 5px 5px 20px 6px rgba(0,0,0,0.5);*/
+    /*box-shadow: 5px 5px 20px 6px rgba(0,0,0,0.5);*/
 }
 
 .project-header {
-    background-color: #9BC1BC;
-    color: rgb(38, 0, 5);
-    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+    /*background-color: #9BC1BC;*/
+    /*color: rgb(38, 0, 5);*/
+    /*-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);*/
+    /*-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);*/
+    /*box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);*/
 }
 
 .project-header .tag {
-    color: rgba(38, 0, 5, 0.62);
+    /*color: rgba(38, 0, 5, 0.62);*/
 }
 
 .project .tag {
-    color: rgba(0,0,0,0.62);
+    /*color: rgba(0,0,0,0.62);*/
 }
 
 .inline-list>li {
-    background-color: #F4F1BB;
-    color: rgba(0, 3, 57, 0.9);
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    /*background-color: #F4F1BB;*/
+    /*color: rgba(0, 3, 57, 0.9);*/
+    /*-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);*/
+    /*-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);*/
+    /*box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);*/
 }
 
 .list>li:before {
-    font-family: 'Glyphicons Halflings';
+/*    font-family: 'Glyphicons Halflings';
     font-style: normal;
     font-weight: normal;
     font-size: 0.9em;
     line-height: 1;
     content: "\e171";
-    color: #ED6A5A;
+    color: rgb(237, 106, 90);*/
 }
 
 .button {

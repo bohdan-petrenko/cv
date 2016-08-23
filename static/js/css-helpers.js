@@ -2,16 +2,31 @@
  * Created by Petrenko on 19.08.2016.
  */
 $(function () {
-    var lastScrollPosition = Math.pow(10, 9);
+    var lastScrollPosition = Math.pow(10, 9),
+        isMenuVisible = true;//optimization
     $(window).scroll(function() {
         var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollPosition < 86) {
-            $(".menu").removeClass("hidden"); return;
+        try {
+            if (scrollPosition < 86) {
+                if(!isMenuVisible) {
+                    $(".menu").removeClass("hidden");
+                    isMenuVisible = true;
+                }
+                return;
+            }
+            if (lastScrollPosition < scrollPosition) {
+                if (isMenuVisible) {
+                    $(".menu").addClass("hidden");
+                    isMenuVisible = false;
+                }
+            } else {
+                if (!isMenuVisible) {
+                    $(".menu").removeClass("hidden");
+                    isMenuVisible = true;
+                }
+            }
+        } finally {
+            lastScrollPosition = scrollPosition;
         }
-        if (lastScrollPosition < scrollPosition)
-            $(".menu").addClass("hidden");
-        else
-            $(".menu").removeClass("hidden");
-        lastScrollPosition = scrollPosition;
     });
 });
