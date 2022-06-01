@@ -1,0 +1,131 @@
+#colors {
+  color: #f1f1f1;
+  /*gray*/
+  color: #d8dddd;
+  /*dark gray*/
+  color: #292d3c;
+  /*dark*/
+  color: #313442;
+  /*dark lighter*/
+  color: #8ac5c6;
+  /*blue on light*/
+  color: #98cccd;
+  /*hovered blue on light*/
+  color: #74babc;
+  /*click blue on light*/
+  color: #468e90;
+  /*border blue on light*/
+  color: #7dbb91;
+  /*green on black*/
+  color: #4e5760;
+  /*gray on black*/
+}
+body {
+  background-color: #E6EBE0;
+}
+::selection {
+  background-color: #ED6A5A;
+  color: white;
+}
+.menu {
+  background-color: #5CA4A9;
+  color: white;
+}
+.menu-item > a {
+  color: white;
+}
+.education-period {
+  color: #ED6A5A;
+}
+.project {
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 20px 6px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 5px 5px 20px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px 6px rgba(0, 0, 0, 0.5);
+}
+.project-header {
+  background-color: #9BC1BC;
+  color: #260005;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+}
+.project-header .tag {
+  color: rgba(38, 0, 5, 0.62);
+}
+.project .tag {
+  color: rgba(0, 0, 0, 0.62);
+}
+.inline-list > li {
+  background-color: #F4F1BB;
+  color: rgba(0, 3, 57, 0.9);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.list > li:before {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1;
+  content: "\e171";
+  color: #ED6A5A;
+}
+.button {
+  background-color: #5CA4A9;
+  color: #ffffff;
+  border-color: #ffffff;
+  outline-color: #5CA4A9;
+}
+.button-icon {
+  color: #5CA4A9;
+}
+.button-icon:after {
+  box-shadow: 0 0 0 3px #5CA4A9;
+}
+.button-icon:hover {
+  box-shadow: 0 0 0px 9px rgba(92, 164, 169, 0.5);
+  color: #fff;
+}
+.button-icon:active {
+  box-shadow: 0 0 0px 9px #5ca4a9;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button-icon:active:after {
+  box-shadow: 0 0 0 3px rgba(92, 164, 169, 0.5);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.more-icon:before {
+  background: url("../icons/more.png") no-repeat left 15px top 15px;
+  background-size: 30px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+.less-icon:before {
+  background: url("../icons/less.png") no-repeat left 15px top 15px;
+  background-size: 30px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+.more-all-icon:before {
+  background: url("../icons/expand-all.png") no-repeat left 15px top 15px;
+  background-size: 30px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+.less-all-icon:before {
+  background: url("../icons/collapse-all.png") no-repeat left 15px top 15px;
+  background-size: 30px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
