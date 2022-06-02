@@ -1,60 +1,217 @@
 <!DOCTYPE html>
-<html ng-app="BohdanPatrenko">
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Bohdan Petrenko personal web site</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic,900,
-        900italic&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap-theme.css">
-
-    <!--<link rel="stylesheet" type="text/css" href="static/css/main.css">-->
-    <link rel="stylesheet" type="text/css" href="static/css/theme.css">
-
-    <link rel="stylesheet" type="text/css" href="static/less/main.css">
-    <!--<link rel="stylesheet" type="text/css" href="static/less/theme.less">-->
-    <!--<script src="static/js/less.min.js" type="text/javascript"></script>-->
-
-    <script src="static/localization/l10n-en.js"></script>
-    <script src="static/localization/l10n-ua.js"></script>
-
-    <script src="static/js/lib/jquery-2.2.1.js"></script>
-    <script src="static/js/lib/angular.js"></script>
-    <script src="static/js/lib/angular-route.js"></script>
-    <script src="static/js/helpers.js"></script>
-    <script src="static/js/css-helpers.js"></script>
-    <script src="static/js/main.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
 </head>
-<body ng-controller="L10nCtrl as l10nCtrl">
-    <header>
-        <nav class="menu no-select">
-            <!-- desktop menu -->
-            <div class="visible-lg visible-md desktop-menu clearfix">
-                <div class="pull-left">
-                    <ul class="menu-content">
-                        <li class="menu-item" id="personal-skills-item"><a class="link-underlined">{{l10nCtrl.l10n.index.personalSkills}}</a></li>
-                        <li class="menu-item" id="professional-skills-item"><a href="#professional-skills" class="link-underlined">{{l10nCtrl.l10n.index.professionalSkills}}</a></li>
-                        <li class="menu-item" id="experience-item"><a href="#experience" class="link-underlined">{{l10nCtrl.l10n.index.experience}}</a></li>
-                        <li class="menu-item" id="contacts-item"><a class="link-underlined">{{l10nCtrl.l10n.index.contacts}}</a></li>
-                    </ul>
+<body>
+<div class="page">
+    <div class="page-content">
+        <div class="left-block">
+            <div class="photo">
+                <img src="static/image/bp.jpg" alt="Bohdan Petrenko">
+            </div>
+            <div class="my-name">
+                Bohdan Petrenko
+            </div>
+            <div class="my-position">
+                Java Software Engineer
+            </div>
+            <div>
+                <div class="left-header">
+                    <div>Contact</div>
+                    <div>
+                        <hr/>
+                    </div>
                 </div>
-                <div class="pull-right">
-                    <ul class="menu-content">
-                        <li class="menu-item lang-item"><a ng-click="l10nCtrl.changeLanguage()">{{l10nCtrl.l10n.index.language}}</a></li>
-                    </ul>
+                <div>bohdan.petrenko@gmail.com</div>
+                <div class="contact-links">
+                    <span>
+                        <a href="https://stackoverflow.com/users/5703638/bohdan-petrenko" target="_blank">
+                        <img src="static/image/stackoverflow.png" alt="stackoverflow">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://github.com/bohdan-petrenko" target="_blank">
+                        <img src="static/image/github.png" alt="github">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.linkedin.com/in/bohdan-petrenko-97711510a/" target="_blank">
+                        <img src="static/image/linkedin.png" alt="linkedin">
+                        </a>
+                    </span>
                 </div>
             </div>
-            <!-- mobile menu -->
-            <div class="visible-xs visible-sm">
+            <div>
+                <div class="left-header">
+                    <div>Education</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="left-text">System engineering</div>
+                <div class="university-date left-text">Sep 2009 - Dec 2014</div>
+                <div class="left-text">
+                    <span>Vinnytsia National Technical University</span>
+                    <a href="https://vntu.edu.ua/en/general-information/vntu-today.html" target="_blank">
+                        <img src="static/image/link-white.png">
+                    </a>
+                </div>
+                <div class="left-text university-degree">
+                    <div class="university-degree-name">Bachelor's degree</div>
+                    <div class="university-degree-date">May 2013</div>
+                </div>
+                <div class="left-text university-degree">
+                    <div class="university-degree-name">Master's degree</div>
+                    <div class="university-degree-date">Dec 2014</div>
+                </div>
             </div>
-        </nav>
-    </header>
-    <main ng-view>
-    </main>
-    <footer>
-
-    </footer>
+            <div>
+                <div class="left-header">
+                    <div>Skills</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div>
+                    <div class="left-text">Java, Groovy</div>
+                    <div class="left-text">Spring: Core, Boot, Reactor</div>
+                    <div class="left-text">Spock, Junit, Gatling</div>
+                    <div class="left-text">Postgresql, MariaDb, Liquibase, JDBC, JPA</div>
+                    <div class="left-text">Aerospike, Couchbase, Redis</div>
+                    <div class="left-text">Apache: Kafka, Kamel</div>
+                    <div class="left-text">Netflix Eureka, Open Feign</div>
+                    <div class="left-text">Maven, Git</div>
+                    <div class="left-text">Kibana, Grafana, Prometheus, Lenses, Charles, JMX</div>
+                </div>
+            </div>
+            <div>
+                <div class="left-header">
+                    <div>Worked with</div>
+                    <div>
+                        <hr/>
+                    </div>
+                </div>
+                <div>
+                    <div>HTML, CSS, Twitter Bootstrap, Javascript, KnockoutJS, MongoDB, Spring Security, Docker</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-block">
+            <div class="experience p">
+                I started my career as a developer for payment systems. Developed both java
+                backend & frontend apps, and web frontend. I worked with my first team till May 2019 and then moved to
+                game industry with Playtika. My main focus always was backend, and work as a full stack helped me to
+                understand development process in general.
+            </div>
+            <div class="work">
+                <div class="work-h1">Work experience</div>
+                <div>
+                    <hr/>
+                </div>
+                <div class="work-section">
+                    <div class="work-header">
+                        <div class="company-name">
+                            <span>GlobalMoney</span>
+                            <a href="https://globalmoney.ua/en/" target="_blank">
+                                <img src="static/image/link.png">
+                            </a>
+                        </div>
+                        <div class="work-time">Sep 2012 - Mar 2017</div>
+                    </div>
+                    <div>
+                        <div class="p">
+                            One of the first non banking payment systems in Ukraine. Allows users to pay for games,
+                            delivery, mobile operator and utility services; deposit, withdraw and transfer funds.
+                            Works both with users via website and with payment agents via cash register.
+                        </div>
+                        <div class="p">
+                            I was involved in development of
+                            desktop utils for customer support and plugins;
+                            implementation of API to interact with users and agents;
+                            integration with external gateways like games, delivery etc;
+                            web cash register;
+                            CRM for customer support to manage users, payments and build daily reports.
+                        </div>
+                    </div>
+                </div>
+                <div class="work-section">
+                    <div class="work-header">
+                        <div class="company-name">ImpactUA</div>
+                        <div class="work-time">Oct 2015 - Jan 2016</div>
+                    </div>
+                    <div class="p">
+                        Small project to maintain and manage database of mobile devices. I was responsible for
+                        frontend only. The website allows to CRUD mobile device, search for device and use templates
+                        for fast creation of similar devices
+                    </div>
+                </div>
+                <div class="work-section">
+                    <div class="work-header">
+                        <div class="company-name">
+                            <span>Electrum Payment Systems</span>
+                            <a href="https://elpaysys.com/eng/" target="_blank">
+                                <img src="static/image/link.png">
+                            </a>
+                        </div>
+                        <div class="work-time">Dec 2016 - Oct 2017</div>
+                    </div>
+                    <div class="p">
+                        Unlike GlobalMoney was aimed at corporate clients. I took a part in development of CRM to manage
+                        client accounts, payments and reports. CRM grants different permissions
+                        according to user role. Also implemented integration with banks and wrote java drivers
+                        for registrar of settlement operations Maria 304 and Exellio FP-700. Driver connects via
+                        TCP/IP or USB and allows to register goods sell, print bills and reports, device configuration.
+                    </div>
+                </div>
+                <div class="work-section">
+                    <div class="work-header">
+                        <div class="company-name">IPan</div>
+                        <div class="work-time">Nov 2017 - May 2019</div>
+                    </div>
+                    <div>
+                        <div class="p">
+                            VerticalEX. Allows users to exchange BTC to USD and EUR back and forth,
+                            check payment history and currency rates, receive transaction updates at email.
+                            I implemented currency exchange, integration with Perfect Money and transaction
+                            notifications,
+                            web view of user profile.
+                        </div>
+                        <div class="p">
+                            Tofy. Allows to manage a company as a tree-like structure of users. Users can
+                            create tasks and assign them to subordinates. Task moves over the company structure, on each
+                            step user can log work, create money request, transfer or complete task.
+                        </div>
+                    </div>
+                </div>
+                <div class="work-section">
+                    <div class="work-header">
+                        <div class="company-name">
+                            <span>Playtika</span>
+                            <a href="https://www.playtika.com/" target="_blank">
+                                <img src="static/image/link.png">
+                            </a>
+                        </div>
+                        <div class="work-time">May 2019 - May 2022</div>
+                    </div>
+                    <div>
+                        <div class="p">
+                            Slotomania - casino game with a lot of slot machines and mini-games inside. My
+                            responsibilities
+                            included: for the new functionality: create delivery plan, propose & agree API and flow with
+                            an architect,
+                            write documentation at Confluence, code development with unit, functional & contract tests
+                            coverage,
+                            load testing; gatekeepery of existing services; code review, mentoring less experienced
+                            teammates.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
